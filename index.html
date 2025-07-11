@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scriso | کانال امنیت سایبری</title>
+  <title>CyberScriso | امنیت سایبری</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
@@ -15,102 +15,171 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-      color: #f0f0f0;
+      background: linear-gradient(135deg, #000000, #1a0000);
+      color: #f2f2f2;
       min-height: 100vh;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 2rem;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     h1 {
-      font-size: 2.8rem;
-      background: linear-gradient(90deg, #ff0033, #ff0000);
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ff0000, #cc0000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #ff0000aa;
     }
 
     p {
-      font-size: 1.1rem;
       color: #ccc;
-      max-width: 600px;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
       text-align: center;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
-    .btn-container {
+    nav {
+      margin: 3rem auto 2rem;
+      max-width: 700px;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
     }
 
-    .btn {
-      background: transparent;
-      border: 2px solid #ff0033;
+    nav a {
+      background: linear-gradient(90deg, #550000, #cc0000);
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #ff000055;
+    }
+
+    nav a:hover {
+      background: white;
+      color: black;
+      box-shadow: 0 0 20px #ffffffaa;
+      transform: scale(1.03);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #111111dd;
+      border: 1px solid #aa000033;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #99000055;
+    }
+
+    section h2 {
       color: #ff0033;
-      padding: 0.8rem 1.8rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
+      margin-bottom: 1rem;
     }
 
-    .btn:hover {
-      background: #fff;
-      color: #000;
-      border-color: #fff;
+    section ul {
+      list-style-type: square;
+      padding-right: 1.5rem;
+      line-height: 2;
     }
 
     footer {
-      margin-top: auto;
-      font-size: 0.9rem;
-      color: #777;
-      padding: 1rem;
+      margin-top: 4rem;
       text-align: center;
+      color: #666;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
+    .btn-main {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(45deg, #ff0000, #990000);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ff000080;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-main:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 0 30px #ffffffcc;
+    }
+
+    @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
       }
-
       p {
         font-size: 1rem;
-        padding: 0 1rem;
       }
-
-      .btn {
-        width: 100%;
-        text-align: center;
+      nav a {
+        font-size: 1rem;
+        padding: 0.8rem;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>SCRISO</h1>
-    <p>به دنیای امنیت سایبری و تست نفوذ خوش آمدید. کانال ما مجموعه‌ای از ابزارها، آموزش‌ها و اطلاعات ناب برای متخصصین این حوزه است.</p>
+    <h1>CyberScriso</h1>
+    <p>مرکز تخصصی تست نفوذ، ابزارهای سایبری، آموزش‌های امنیتی و تحلیل باگ‌ها برای علاقه‌مندان و حرفه‌ای‌ها</p>
+    <a href="https://t.me/CyberScriso" class="btn-main">عضویت در کانال تلگرام</a>
   </header>
 
-  <div class="btn-container">
-    <a href="https://t.me/Scriso" class="btn">ورود به کانال تلگرام</a>
-    <a href="#" class="btn">تماس با ما</a>
-  </div>
+  <nav>
+    <a href="#tools">ابزارهای تست نفوذ</a>
+    <a href="#tutorials">آموزش‌های امنیتی</a>
+    <a href="#reports">گزارش باگ و آسیب‌پذیری</a>
+  </nav>
+
+  <section id="tools">
+    <h2>ابزارهای تست نفوذ</h2>
+    <ul>
+      <li>اسکنر پورت سفارشی</li>
+      <li>کدهای اکسپلویت برای ویندوز و لینوکس</li>
+      <li>اسکریپت‌های اتوماتیک تحلیل آسیب‌پذیری</li>
+    </ul>
+  </section>
+
+  <section id="tutorials">
+    <h2>آموزش‌های امنیتی</h2>
+    <ul>
+      <li>آموزش شناسایی شبکه و زیرساخت</li>
+      <li>آشنایی با تست نفوذ وب و OWASP</li>
+      <li>تجزیه‌ و تحلیل لاگ‌ها و ترافیک مشکوک</li>
+    </ul>
+  </section>
+
+  <section id="reports">
+    <h2>گزارش‌های باگ و تحلیل</h2>
+    <ul>
+      <li>تحلیل باگ XSS در سایت‌های واقعی</li>
+      <li>گزارش آسیب‌پذیری در CMSها</li>
+      <li>آسیب‌پذیری‌های کشف‌شده توسط اعضای کانال</li>
+    </ul>
+  </section>
 
   <footer>
-    © 2025 - طراحی شده با ❤️ توسط Scriso
+    © 2025 | طراحی و توسعه توسط CyberScriso | کانال تلگرام: <a href="https://t.me/CyberScriso" style="color:#ff4444;">@CyberScriso</a>
   </footer>
+
 </body>
 </html>
