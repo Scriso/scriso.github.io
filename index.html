@@ -1,185 +1,193 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CyberScriso | امنیت سایبری</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberScriso </title>
+ <link rel="icon" href="favicon.png" type="image/png">
+  <!-- سئو پایه -->
+  <meta name="description" content="تیم هکتویستی CyberScriso | گروهی ناشناس با نفوذهایی فراتر از تصور. Scriso، جایی که سکوت فریاد می‌زند.">
+  <meta name="keywords" content="CyberScriso, اسکریزو, تیم هک, هکتویست, هک ایرانی, گروه ناشناس, scriso, سایبری, cyb3r scriso, cyberscriso, اسکریزو تیم">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CyberScriso">
+  <meta name="theme-color" content="#ff0000" />
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CyberScriso",
+    "url": "https://scriso.github.io",
+    "sameAs": [
+      "https://t.me/CyberScriso",
+      "mailto:Scriso@proton.me"
+    ],
+    "description": "تیم هکتویستی ناشناس در زمینه امنیت، دیتا و سایبر."
+  }
+  </script>
+
+  <!-- استایل -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
     * {
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Vazirmatn', sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
     body {
       background: linear-gradient(135deg, #000000, #1a0000);
-      color: #f2f2f2;
+      color: #eee;
       min-height: 100vh;
-      padding: 2rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-    }
-
-    header {
+      align-items: center;
+      padding: 2rem;
       text-align: center;
-      margin-bottom: 3rem;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       background: linear-gradient(90deg, #ff0000, #cc0000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 10px #ff0000aa;
+      filter: drop-shadow(0 0 12px #ff000088);
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
     }
 
-    p {
-      color: #ccc;
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      line-height: 1.8;
+    p.about {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 1.5rem auto 3rem;
+      line-height: 1.6;
+      color: #bb2222cc;
+      font-style: italic;
     }
 
     nav {
-      margin: 3rem auto 2rem;
-      max-width: 700px;
       display: flex;
-      flex-direction: column;
       gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
-      background: linear-gradient(90deg, #550000, #cc0000);
-      color: white;
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #990000, #ff0000);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 12px;
       text-decoration: none;
-      padding: 1rem;
-      border-radius: 10px;
-      font-weight: bold;
+      box-shadow: 0 0 15px #ff000077;
       transition: all 0.3s ease;
-      box-shadow: 0 0 10px #ff000055;
+      border: 2px solid #ff2222;
     }
 
     nav a:hover {
-      background: white;
-      color: black;
-      box-shadow: 0 0 20px #ffffffaa;
-      transform: scale(1.03);
+      background: #fff;
+      color: #990000;
+      box-shadow: 0 0 25px #ff0000cc;
+      transform: scale(1.05) rotate(-2deg);
     }
 
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: #111111dd;
-      border: 1px solid #aa000033;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #99000055;
+    /* انیمیشن و بخش مخفی */
+    .popup {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      padding: 1rem 2rem;
+      color: #ff5555;
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px dashed #ff0000;
+      border-radius: 10px;
+      display: none;
+      animation: fadeIn 1s ease forwards;
     }
 
-    section h2 {
-      color: #ff0033;
-      margin-bottom: 1rem;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    section ul {
-      list-style-type: square;
-      padding-right: 1.5rem;
-      line-height: 2;
+    .contact-options {
+      margin-top: 1rem;
+      display: none;
+      flex-direction: column;
+      gap: 0.8rem;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .contact-options a {
+      background: #111;
+      color: #ff4444;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid #ff4444;
+      transition: all 0.3s ease;
+    }
+
+    .contact-options a:hover {
+      background: #ff4444;
+      color: #000;
     }
 
     footer {
-      margin-top: 4rem;
-      text-align: center;
-      color: #666;
+      margin-top: 5rem;
       font-size: 0.9rem;
+      color: #660000aa;
     }
 
-    .btn-main {
-      margin-top: 2rem;
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: linear-gradient(45deg, #ff0000, #990000);
-      color: #fff;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 0 15px #ff000080;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .btn-main:hover {
-      background: white;
-      color: black;
-      transform: scale(1.05) rotate(-1deg);
-      box-shadow: 0 0 30px #ffffffcc;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
-      p {
+      p.about {
         font-size: 1rem;
+        max-width: 90vw;
       }
       nav a {
-        font-size: 1rem;
-        padding: 0.8rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>CyberScriso</h1>
-    <p>مرکز تخصصی تست نفوذ، ابزارهای سایبری، آموزش‌های امنیتی و تحلیل باگ‌ها برای علاقه‌مندان و حرفه‌ای‌ها</p>
-    <a href="https://t.me/CyberScriso" class="btn-main">عضویت در کانال تلگرام</a>
-  </header>
+  <h1>CyberScriso</h1>
+
+  <p class="about">فراتر از آنچه دیده می‌شود؛ تسلط بر ناشناخته‌ها و نفوذ به لایه‌های پنهان...</p>
 
   <nav>
-    <a href="#tools">ابزارهای تست نفوذ</a>
-    <a href="#tutorials">آموزش‌های امنیتی</a>
-    <a href="#reports">گزارش باگ و آسیب‌پذیری</a>
+    <a href="https://t.me/CyberScriso" target="_blank">Tlegram</a>
+    <a href="#" onclick="showComingSoon()">About</a>
+    <a href="#" onclick="showContact()">Contact</a>
   </nav>
 
-  <section id="tools">
-    <h2>ابزارهای تست نفوذ</h2>
-    <ul>
-      <li>اسکنر پورت سفارشی</li>
-      <li>کدهای اکسپلویت برای ویندوز و لینوکس</li>
-      <li>اسکریپت‌های اتوماتیک تحلیل آسیب‌پذیری</li>
-    </ul>
-  </section>
+  <div id="comingSoon" class="popup">🔒 Coming Soon...</div>
 
-  <section id="tutorials">
-    <h2>آموزش‌های امنیتی</h2>
-    <ul>
-      <li>آموزش شناسایی شبکه و زیرساخت</li>
-      <li>آشنایی با تست نفوذ وب و OWASP</li>
-      <li>تجزیه‌ و تحلیل لاگ‌ها و ترافیک مشکوک</li>
-    </ul>
-  </section>
-
-  <section id="reports">
-    <h2>گزارش‌های باگ و تحلیل</h2>
-    <ul>
-      <li>تحلیل باگ XSS در سایت‌های واقعی</li>
-      <li>گزارش آسیب‌پذیری در CMSها</li>
-      <li>آسیب‌پذیری‌های کشف‌شده توسط اعضای کانال</li>
-    </ul>
-  </section>
+  <div id="contactOptions" class="contact-options">
+    <a href="https://t.me/Cyb3rScriso" target="_blank">📟 Telegram</a>
+    <a href="mailto:Scriso@proton.me">📧 Email</a>
+  </div>
 
   <footer>
-    © 2025 | طراحی و توسعه توسط CyberScriso | کانال تلگرام: <a href="https://t.me/CyberScriso" style="color:#ff4444;">@CyberScriso</a>
+    © 2025 CyberScriso Team
   </footer>
+
+  <script>
+    function showComingSoon() {
+      document.getElementById('comingSoon').style.display = 'block';
+      document.getElementById('contactOptions').style.display = 'none';
+    }
+    function showContact() {
+      document.getElementById('comingSoon').style.display = 'none';
+      document.getElementById('contactOptions').style.display = 'flex';
+    }
+  </script>
 
 </body>
 </html>
