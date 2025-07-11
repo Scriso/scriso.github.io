@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CyberScriso </title>
+  <title>CyberScriso</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
   <meta name="description" content="تیم هکتویستی CyberScriso | گروهی ناشناس با نفوذهایی فراتر از تصور. Scriso، جایی که سکوت فریاد می‌زند.">
   <meta name="keywords" content="CyberScriso, اسکریزو, تیم هک, هکتویست, هک ایرانی, گروه ناشناس, scriso, سایبری, cyb3r scriso, cyberscriso, اسکریزو تیم">
   <meta name="robots" content="index, follow">
@@ -36,15 +35,25 @@
       font-family: 'Vazirmatn', sans-serif;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       background: linear-gradient(135deg, #000000, #1a0000);
       color: #eee;
-      min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 2rem;
+      flex-direction: column;
       text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
     }
 
     h1 {
@@ -59,7 +68,6 @@
 
     p.about {
       font-size: 1.2rem;
-      max-width: 600px;
       margin: 1.5rem auto 3rem;
       line-height: 1.6;
       color: #bb2222cc;
@@ -93,30 +101,25 @@
       transform: scale(1.05) rotate(-2deg);
     }
 
-    /* انیمیشن و بخش مخفی */
-    .popup {
+    .popup, .contact-options {
       margin-top: 2rem;
       font-size: 1.3rem;
       padding: 1rem 2rem;
-      color: #ff5555;
-      background: rgba(255, 0, 0, 0.1);
-      border: 1px dashed #ff0000;
       border-radius: 10px;
       display: none;
       animation: fadeIn 1s ease forwards;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .popup {
+      color: #ff5555;
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px dashed #ff0000;
     }
 
     .contact-options {
-      margin-top: 1rem;
       display: none;
       flex-direction: column;
       gap: 0.8rem;
-      animation: fadeIn 1s ease forwards;
     }
 
     .contact-options a {
@@ -134,8 +137,16 @@
       color: #000;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     footer {
-      margin-top: 5rem;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
       font-size: 0.9rem;
       color: #660000aa;
     }
@@ -157,21 +168,23 @@
 </head>
 <body>
 
-  <h1>CyberScriso</h1>
+  <div class="container">
+    <h1>CyberScriso</h1>
 
-  <p class="about">فراتر از آنچه دیده می‌شود؛ تسلط بر ناشناخته‌ها و نفوذ به لایه‌های پنهان...</p>
+    <p class="about">فراتر از آنچه دیده می‌شود؛ تسلط بر ناشناخته‌ها و نفوذ به لایه‌های پنهان...</p>
 
-  <nav>
-    <a href="https://t.me/CyberScriso" target="_blank">Tlegram</a>
-    <a href="#" onclick="showComingSoon()">About</a>
-    <a href="#" onclick="showContact()">Contact</a>
-  </nav>
+    <nav>
+      <a href="https://t.me/CyberScriso" target="_blank">Telegram</a>
+      <a href="#" onclick="showComingSoon()">About</a>
+      <a href="#" onclick="showContact()">Contact</a>
+    </nav>
 
-  <div id="comingSoon" class="popup">🔒 Coming Soon...</div>
+    <div id="comingSoon" class="popup">🔒 Coming Soon...</div>
 
-  <div id="contactOptions" class="contact-options">
-    <a href="https://t.me/Cyb3rScriso" target="_blank">📟 Telegram</a>
-    <a href="mailto:Scriso@proton.me">📧 Email</a>
+    <div id="contactOptions" class="contact-options">
+      <a href="https://t.me/Cyb3rScriso" target="_blank">📟 Telegram</a>
+      <a href="mailto:Scriso@proton.me">📧 Email</a>
+    </div>
   </div>
 
   <footer>
